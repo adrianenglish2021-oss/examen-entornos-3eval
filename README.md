@@ -87,20 +87,20 @@ classDiagram
 ## 4. Diagrama de Casos de Uso UML
 
 ```mermaid
-usecaseDiagram
-    actor Jugador as "Jugador"
+flowchart LR
+    Actor((Jugador))
     
-    package Sistema_Motor {
-        usecase UC1 as "Iniciar Partida"
-        usecase UC2 as "Mover Personaje"
-        usecase UC3 as "Pausar/Reanudar Juego"
-        usecase UC4 as "Usar Habilidad (Dash)"
-    }
+    subgraph Sistema_Motor [Sistema Motor]
+        UC1([Iniciar Partida])
+        UC2([Mover Personaje])
+        UC3([Pausar/Reanudar Juego])
+        UC4([Usar Habilidad Dash])
+    end
     
-    Jugador --> UC1
-    Jugador --> UC2
-    Jugador --> UC3
-    Jugador --> UC4
+    Actor --> UC1
+    Actor --> UC2
+    Actor --> UC3
+    Actor --> UC4
 ```
 
 ## 5. Especificación de Casos de Uso
